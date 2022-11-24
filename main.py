@@ -14,11 +14,40 @@ def multi_sort(arr, cmp, method="None"):
         print("invalid argument!")
 
 
+##############################################################################
+############################ MERGE SORT FUNCTION #############################
+##############################################################################
 
 
-# must be in-place sort
 def merge_sort(arr,cmp):
-    pass
+    l3 = []
+    i = 0
+    n = 0
+    while i < len(arr) and n < len(cmp):
+        if arr[i] < cmp[n]:
+            l3.append(arr[i])
+            i += 1
+        else:
+            l3.append(cmp[n])
+            n += 1
+    if i == len(arr):
+        l3.extend(cmp[n:])
+    else:
+        l3.extend(arr[i:])
+    l = l3
+    return l
+
+#my test harness
+
+#arr = input("Please enter an array: ")
+#cmp = input("Please enter an array: ")
+#l3 = merge_sort(arr,cmp)
+#l3.sort()
+#print(l3)
+
+##############################################################################
+############################ QUICK SORT FUNCTION #############################
+##############################################################################
 
 # must be in-place sort
 def quick_sort(arr,cmp):
